@@ -1,0 +1,27 @@
+{
+  "HeroSection": {
+    "Heading": "Essential Vitamins",
+    "LeftSideContent": {
+      "LeftHeading": "Online Medical Suplies",
+      "SubHeading": "Get Your Vitamins & Minerals",
+      "Button": "EXPLORE"
+    },
+    "RigthSideContent": [
+      {
+        "Title": "Vitamins",
+        "DescriptionOne": "increased Vitamins and",
+        "DescriptionTwo": "minerals in your diet"
+      },
+      {
+        "Title": "Weight Loss",
+        "DescriptionOne": "Weight Loss",
+        "DescriptionTwo": "Find scientifically proven solution"
+      },
+      {
+        "Title": "Functional Foods",
+        "DescriptionOne": "Weight Loss",
+        "DescriptionTwo": "From protein powers to baby formula"
+      }
+    ]
+  }
+}
