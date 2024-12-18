@@ -23,5 +23,37 @@
         "DescriptionTwo": "From protein powers to baby formula"
       }
     ]
-  }
+  },
+  "Features": [
+    {
+      "Title": "clinically studied",
+      "DescriptionOne": "All products that we offer have ",
+      "DescriptionTwo": "undergone lab and safety tests"
+    },
+    {
+      "Title": "Vegetarian Friendly",
+      "DescriptionOne": "We have a wide selection of vegetarian",
+      "DescriptionTwo": "products to meet your needs"
+    },
+    {
+      "Title": "Made in India",
+      "DescriptionOne": "Shop local and explore health products ",
+      "DescriptionTwo": "made right here in India"
+    },
+    {
+      "Title": "Free shipping",
+      "DescriptionOne": "We deliver to your door with no",
+      "DescriptionTwo": "shipping costs on your order"
+    },
+    {
+      "Title": "No Risk",
+      "DescriptionOne": "We ensure that all products are safe",
+      "DescriptionTwo": "and within their use-by date"
+    },
+    {
+      "Title": "GMO free",
+      "DescriptionOne": "Natural, no modified products and",
+      "DescriptionTwo": "derivatives for those who need it"
+    }
+  ]
 }

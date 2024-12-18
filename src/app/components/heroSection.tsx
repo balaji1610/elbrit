@@ -3,6 +3,7 @@ import Logo from "@/app/components/logo";
 import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import React, { useState, useEffect } from "react";
 import Content from "../utils/content.json";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Stack from "@mui/material/Stack";
@@ -11,6 +12,8 @@ import Probiotics from "../../../public/probiotics2.png";
 import Vitamins from "../../../public/vitamins.png";
 import WeigthLoss from "../../../public/weightLoss.png";
 import functionalFood from "../../../public/functionalfoods.png";
+import TwoDot from "../../../public/twoDot.png";
+import ListFeature from "./listFeature";
 export default function HeroSection() {
   const {
     HeroSection: {
@@ -27,14 +30,16 @@ export default function HeroSection() {
     "Weight Loss": WeigthLoss,
     "Functional Foods": functionalFood,
   };
+
   return (
-    <>
+    <Box sx={{ position: "relative" }}>
       <Logo />
       <Grid
         container
         sx={{
           backgroundColor: "#e3f5fb",
           margin: isDeskopScreen ? "5vh" : "2vh",
+          height: "110vh",
         }}
       >
         <Grid size={{ md: 12, sm: 12, xs: 12 }}>
@@ -45,6 +50,7 @@ export default function HeroSection() {
               justifyContent: "center",
               color: "#003269",
               marginTop: "5vh",
+              height: isDeskopScreen ? "2vh" : "0",
             }}
           >
             <Typography variant={isDeskopScreen ? "h1" : "h4"} gutterBottom>
@@ -55,7 +61,10 @@ export default function HeroSection() {
 
         <Grid container size={{ md: 12, sm: 12, xs: 12 }}>
           <Grid size={{ md: 1, sm: 2, xs: 12 }}></Grid>
-          <Grid size={{ md: 3, sm: 2, xs: 12 }}>
+          <Grid
+            size={{ md: 3, sm: 2, xs: 12 }}
+            sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}
+          >
             <Box
               sx={{
                 display: "flex",
@@ -111,11 +120,11 @@ export default function HeroSection() {
               />
             </Box>
           </Grid>
-          <Grid size={{ md: 3, sm: 4, xs: 12 }}>
-            {RigthSideContent.map((el) => {
+          <Grid size={{ md: 4, sm: 4, xs: 12 }} sx={{}}>
+            {RigthSideContent.map((el, index) => {
               const { Title, DescriptionOne, DescriptionTwo } = el;
               return (
-                <Box sx={{ marginTop: "15px" }}>
+                <Box key={index} sx={{ marginTop: "15px" }}>
                   <Stack direction="row" spacing={2}>
                     <Box>
                       <Image
@@ -146,7 +155,28 @@ export default function HeroSection() {
           </Grid>
           <Grid size={{ md: 1, sm: 2, xs: 12 }}></Grid>
         </Grid>
+        <Grid size={{ md: 4, sm: 4, xs: 12 }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+            <Image
+              src={TwoDot}
+              alt="TwoDot"
+              style={{
+                objectFit: "fill",
+              }}
+            />
+          </Box>
+        </Grid>
       </Grid>
-    </>
+
+      <Box sx={{ position: "relative", top: "-20vh" }}>
+        <ListFeature />
+      </Box>
+    </Box>
   );
 }
