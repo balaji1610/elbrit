@@ -13,7 +13,7 @@ import Vitamins from "../../../public/vitamins.png";
 import WeigthLoss from "../../../public/weightLoss.png";
 import functionalFood from "../../../public/functionalfoods.png";
 import TwoDot from "../../../public/twoDot.png";
-import ListFeature from "./listFeature";
+
 export default function HeroSection() {
   const {
     HeroSection: {
