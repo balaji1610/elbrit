@@ -31,7 +31,9 @@ export default function ListFeature() {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          height: isDeskopScreen ? "40vh" : "0",
+          height: isDeskopScreen ? "auto" : "0",
+          marginTop: "-15vh",
+          marginBottom: "20px",
         }}
       >
         <Box

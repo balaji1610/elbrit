@@ -55,5 +55,38 @@
       "DescriptionOne": "Natural, no modified products and",
       "DescriptionTwo": "derivatives for those who need it"
     }
-  ]
+  ],
+  "Ingredients": {
+    "Title": "INGREDIENTS",
+    "SUBTITLE": "Better Ingredients",
+    "DescriptionOne": "Only the best when you choose products offered on our platform high-quality",
+    "DescriptionTwo": "ingredients for high quality products!",
+    "IngredientsList": [
+      {
+        "Title": "Vitamin C",
+        "Description": "Vitamin C as ascorbic acid",
+        "button": "SEE MORE"
+      },
+      {
+        "Title": "Vitamin B3",
+        "Description": "Niacin for healthy gut and skin",
+        "button": "SEE MORE"
+      },
+      {
+        "Title": "Magnesium",
+        "Description": "Boost energy and support muscle function",
+        "button": "SEE MORE"
+      },
+      {
+        "Title": "Hyaluronic Acid",
+        "Description": "For smooth,supple and soft skin!",
+        "button": "SEE MORE"
+      },
+      {
+        "Title": "Lactobacillus",
+        "Description": "Invigorate your gut microbiome",
+        "button": "SEE MORE"
+      }
+    ]
+  }
 }

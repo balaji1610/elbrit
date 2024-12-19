@@ -38,8 +38,8 @@ export default function HeroSection() {
         container
         sx={{
           backgroundColor: "#e3f5fb",
-          margin: isDeskopScreen ? "3vh" : "2vh",
-          height: "110vh",
+          margin: isDeskopScreen ? "3vh" : "2vh 2vh 15vh 2vh",
+          height: isDeskopScreen ? "110vh" : "auto",
         }}
       >
         <Grid size={{ md: 12, sm: 12, xs: 12 }}>
