@@ -26,7 +26,13 @@ export default function ListFeature() {
   return (
     <>
       <Box
-        sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          height: isDeskopScreen ? "40vh" : "0",
+        }}
       >
         <Box
           sx={{
@@ -46,8 +52,6 @@ export default function ListFeature() {
                       display: "flex",
                       flexDirection: "row",
                       justifyContent: "center",
-                      marginTop: "-54px",
-                      marginBottom: "100px",
                     }}
                   >
                     <Stack direction="column">
@@ -59,6 +63,7 @@ export default function ListFeature() {
                             objectFit: "fill",
                           }}
                           loading="lazy"
+                          placeholder="blur"
                         />
                       </Box>
                       <Box component="h3" sx={{ color: "#fff" }}>

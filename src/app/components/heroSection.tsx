@@ -32,13 +32,13 @@ export default function HeroSection() {
   };
 
   return (
-    <Box sx={{ position: "relative" }}>
+    <>
       <Logo />
       <Grid
         container
         sx={{
           backgroundColor: "#e3f5fb",
-          margin: isDeskopScreen ? "5vh" : "2vh",
+          margin: isDeskopScreen ? "3vh" : "2vh",
           height: "110vh",
         }}
       >
@@ -173,10 +173,6 @@ export default function HeroSection() {
           </Box>
         </Grid>
       </Grid>
-
-      <Box sx={{ position: "relative", top: "-20vh" }}>
-        <ListFeature />
-      </Box>
-    </Box>
+    </>
   );
 }

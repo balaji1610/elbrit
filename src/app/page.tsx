@@ -15,8 +15,9 @@ export default function Home() {
     return null;
   }
   return (
-    <div>
+    <>
       <HeroSection />
-    </div>
+      <ListFeature />
+    </>
   );
 }
