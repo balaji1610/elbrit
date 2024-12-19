@@ -33,9 +33,9 @@ export default function Ingredients() {
     <Box
       sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
     >
-      <Box sx={{ width: "90%" }}>
+      <Box sx={{ width: "80%" }}>
         <Grid container spacing={2}>
-          <Grid size={{ md: 6, sm: 6, xs: 12 }}>
+          <Grid size="auto">
             <Stack direction="column">
               <Box sx={{ color: "#2a5361" }}>
                 <Typography variant="subtitle2" gutterBottom>
