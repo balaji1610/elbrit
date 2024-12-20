@@ -11,6 +11,8 @@ import Laactobacillus from "../../../public/Lactobacillus.png";
 import Magnesium from "../../../public/Magnesium.png";
 import Stack from "@mui/material/Stack";
 import { Typography } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 export default function Ingredients() {
   const {
     Ingredients: {
@@ -21,6 +23,7 @@ export default function Ingredients() {
       IngredientsList,
     },
   } = Content;
+  const isDeskopScreen = useMediaQuery("(min-width:600px)");
 
   const listVitaminsImage: { [key: string]: StaticImageData } = {
     "Vitamin C": VitaminC,
@@ -35,7 +38,7 @@ export default function Ingredients() {
       sx={{
         display: "flex",
         flexDirection: "row",
-        justifyContent: "flex-end",
+        justifyContent: isDeskopScreen ? "flex-end" : "center",
       }}
     >
       <Box sx={{ width: "90%" }}>

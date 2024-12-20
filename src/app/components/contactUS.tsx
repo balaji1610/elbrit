@@ -32,6 +32,7 @@ export default function ContactUS() {
         justifyContent: "center",
         height: "auto",
         backgroundColor: "#103f4e",
+        marginTop: isDeskopScreen ? "30vh" : "25px",
       }}
     >
       <Box sx={{ width: "90%" }}>

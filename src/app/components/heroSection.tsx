@@ -176,7 +176,8 @@ export default function HeroSection() {
           sx={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "flex-start",
+            justifyContent: "center",
+            width: "16vw",
           }}
         >
           <Image
