@@ -19,7 +19,7 @@ export function ImageWithText({ imageList, index }: any) {
         position: "relative",
         width: "300px",
         height: IsfullImage ? "150px" : "20px",
-        marginTop: index == 4 || index == 6 ? "35vh" : "",
+        marginTop: index == 4 || index == 6 ? "212px" : "",
       }}
     >
       <Box
@@ -34,9 +34,9 @@ export function ImageWithText({ imageList, index }: any) {
       >
         <Image
           src={CategoryImage[Category]}
-          alt="TwoDot"
+          alt={Category}
           height={IsfullImage ? 360 : 160}
-          width={300}
+          width={280}
           style={{ objectFit: "cover", borderRadius: "10px" }}
         />
       </Box>
@@ -76,16 +76,24 @@ export function ImageWithText({ imageList, index }: any) {
 export default function Blogs() {
   const { Blogs } = Content;
   return (
-    <Box>
-      <Grid container spacing={2}>
-        {Blogs.map((item, index) => {
-          return (
-            <Grid key={index} size={{ md: 3, sm: 3, xs: 12 }}>
-              <ImageWithText imageList={item} index={index} />
-            </Grid>
-          );
-        })}
-      </Grid>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+      }}
+    >
+      <Box sx={{ width: "90%" }}>
+        <Grid container spacing={2}>
+          {Blogs.map((item, index) => {
+            return (
+              <Grid key={index} size={{ md: 3, sm: 3, xs: 12, xl: 3 }}>
+                <ImageWithText imageList={item} index={index} />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Box>
     </Box>
   );
 }
