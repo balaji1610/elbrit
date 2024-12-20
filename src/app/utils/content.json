@@ -142,5 +142,23 @@
         "Date": "17 MAR"
       }
     ]
+  },
+  "Contact": {
+    "ContactUS": [
+      {
+        "Source": "Phone Number",
+        "Communication": "+974 3118 1843"
+      },
+      {
+        "Source": "Email Address",
+        "Communication": "Elbrithcqhr@gmail.com"
+      },
+      {
+        "Source": "Office Location",
+        "Communication": " Ambassador Street, Zone 61"
+      }
+    ],
+    "Motta": "Your health, physical and emotional well-being is important to us. We are always by your side and have made it even easier for you to find the necessary vitamin",
+    "Address": "Elbrit Life Sciences Private Limited. C20, BKC, G Block, Mumbai 400051"
   }
 }

@@ -118,6 +118,7 @@ export default function Blogs() {
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
+          marginBottom: isDeskopScreen ? "25vh" : "auto",
         }}
       >
         <Box sx={{ width: isDeskopScreen ? "90%" : "70%" }}>
