@@ -10,7 +10,7 @@ import Feature6 from "../../../public/feature06.png";
 import Image, { StaticImageData } from "next/image";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Content from "../utils/content.json";
-import Typography from "@mui/material/Typography";
+
 export default function ListFeature() {
   const { Features } = Content;
 

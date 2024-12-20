@@ -3,7 +3,6 @@ import Logo from "@/app/components/logo";
 import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import React, { useState, useEffect } from "react";
 import Content from "../utils/content.json";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Stack from "@mui/material/Stack";

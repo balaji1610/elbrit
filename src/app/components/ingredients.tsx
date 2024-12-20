@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 import Content from "../utils/content.json";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import vitaminsBlank from "../../../public/vitaminsBlank.png";
 import VitaminC from "../../../public/VitaminC.png";
 import VitaminB3 from "../../../public/VitaminB3.png";
@@ -21,7 +21,7 @@ export default function Ingredients() {
     },
   } = Content;
 
-  const listVitaminsImage: any = {
+  const listVitaminsImage: { [key: string]: StaticImageData } = {
     "Vitamin C": VitaminC,
     "Vitamin B3": VitaminB3,
     Magnesium: Magnesium,

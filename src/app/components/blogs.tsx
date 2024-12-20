@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+import Image, { StaticImageData } from "next/image";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
@@ -8,10 +9,21 @@ import Content from "../utils/content.json";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Stack from "@mui/material/Stack";
 
-export function ImageWithText({ imageList, index }: any) {
+interface ImageListType {
+  Category: string;
+  Description: string;
+  IsfullImage: boolean;
+  Date: string;
+}
+
+interface ImageWithTextPropsTYpe {
+  imageList: ImageListType;
+  index: number;
+}
+export function ImageWithText({ imageList, index }: ImageWithTextPropsTYpe) {
   const { Category, Description, IsfullImage, Date } = imageList;
 
-  const CategoryImage: any = {
+  const CategoryImage: { [key: string]: StaticImageData } = {
     "Bottle Pills": BlogImage1,
     Pills: BlogImage2,
   };
