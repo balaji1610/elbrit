@@ -52,7 +52,7 @@ export default function HeroSection() {
                 height: isDeskopScreen ? "2vh" : "0",
               }}
             >
-              <Typography variant={isDeskopScreen ? "h1" : "h4"} gutterBottom>
+              <Typography variant={isDeskopScreen ? "h1" : "h4"}>
                 {Heading}
               </Typography>
             </Box>
