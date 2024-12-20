@@ -34,11 +34,11 @@ export default function HeroSection() {
     <>
       <Logo />
       <Box
-        sx={(theme) => ({
+        sx={{
           backgroundColor: "#e3f5fb",
           margin: isDeskopScreen ? "3vh" : "2vh 2vh 15vh 2vh",
           height: isDeskopScreen ? "100vh" : "auto",
-        })}
+        }}
       >
         <Grid container>
           <Grid size={{ md: 12, sm: 12, xs: 12, xl: 12 }}>
