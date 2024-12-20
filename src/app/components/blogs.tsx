@@ -6,8 +6,8 @@ import BlogImage1 from "../../../public/blog1Image.png";
 import BlogImage2 from "../../../public/blog2image.png";
 import Content from "../utils/content.json";
 
-export function ImageWithText(props: any) {
-  const { Category, Description, IsfullImage, Date } = props.imageList;
+export function ImageWithText({ imageList, index }: any) {
+  const { Category, Description, IsfullImage, Date } = imageList;
 
   const CategoryImage: any = {
     "Bottle Pills": BlogImage1,
@@ -19,6 +19,7 @@ export function ImageWithText(props: any) {
         position: "relative",
         width: "300px",
         height: IsfullImage ? "150px" : "20px",
+        marginTop: index == 4 || index == 6 ? "35vh" : "",
       }}
     >
       <Box
@@ -57,7 +58,6 @@ export function ImageWithText(props: any) {
         &nbsp; &nbsp;{Date}
       </Box>
 
-      {/* Text */}
       <Typography
         variant="caption"
         sx={{
@@ -81,7 +81,7 @@ export default function Blogs() {
         {Blogs.map((item, index) => {
           return (
             <Grid key={index} size={{ md: 3, sm: 3, xs: 12 }}>
-              <ImageWithText imageList={item} />
+              <ImageWithText imageList={item} index={index} />
             </Grid>
           );
         })}
