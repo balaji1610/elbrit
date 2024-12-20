@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid2";
 import BlogImage1 from "../../../public/blog1Image.png";
 import BlogImage2 from "../../../public/blog2image.png";
 import Content from "../utils/content.json";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export function ImageWithText({ imageList, index }: any) {
   const { Category, Description, IsfullImage, Date } = imageList;
@@ -13,13 +14,18 @@ export function ImageWithText({ imageList, index }: any) {
     "Bottle Pills": BlogImage1,
     Pills: BlogImage2,
   };
+  const isDeskopScreen = useMediaQuery("(min-width:600px)");
   return (
     <Box
       sx={{
         position: "relative",
         width: "300px",
-        height: IsfullImage ? "150px" : "20px",
-        marginTop: index == 4 || index == 6 ? "212px" : "",
+        height: isDeskopScreen ? (IsfullImage ? "150px" : "20px") : "25vh",
+        marginTop: isDeskopScreen
+          ? index == 4 || index == 6
+            ? "212px"
+            : ""
+          : "",
       }}
     >
       <Box
@@ -35,7 +41,7 @@ export function ImageWithText({ imageList, index }: any) {
         <Image
           src={CategoryImage[Category]}
           alt={Category}
-          height={IsfullImage ? 360 : 160}
+          height={isDeskopScreen ? (IsfullImage ? 360 : 160) : 180}
           width={280}
           style={{ objectFit: "cover", borderRadius: "10px" }}
         />
@@ -45,11 +51,10 @@ export function ImageWithText({ imageList, index }: any) {
         sx={{
           position: "relative",
           zIndex: 2,
-          textAlign: "left",
           lineHeight: "36px",
           backgroundColor: "#003269",
           color: "#fff",
-          marginTop: "10px",
+          marginTop: "20px",
           borderRadius: "15px 32px 30px 5px",
           width: "27%",
           marginLeft: "-5px",
@@ -58,23 +63,26 @@ export function ImageWithText({ imageList, index }: any) {
         &nbsp; &nbsp;{Date}
       </Box>
 
-      <Typography
-        variant="caption"
+      <Box
         sx={{
           position: "relative",
           zIndex: 2,
-          textAlign: "center",
-          lineHeight: "200px",
+          color: "#ffffff",
+          width: "auto",
+          fontWeight: "bold",
+          marginLeft: "20px",
+          marginTop: "10px",
         }}
       >
-        {Description}
-      </Typography>
+        <Typography variant="subtitle1">{Description}</Typography>
+      </Box>
     </Box>
   );
 }
 
 export default function Blogs() {
   const { Blogs } = Content;
+  const isDeskopScreen = useMediaQuery("(min-width:600px)");
   return (
     <Box
       sx={{
@@ -83,7 +91,7 @@ export default function Blogs() {
         justifyContent: "center",
       }}
     >
-      <Box sx={{ width: "90%" }}>
+      <Box sx={{ width: isDeskopScreen ? "90%" : "70%" }}>
         <Grid container spacing={2}>
           {Blogs.map((item, index) => {
             return (
