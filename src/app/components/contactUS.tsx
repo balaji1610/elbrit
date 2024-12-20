@@ -52,7 +52,12 @@ export default function ContactUS() {
                 >
                   <Stack direction="row">
                     <Box>
-                      <Image src={contactImage[Source]} alt={Source} />
+                      <Image
+                        src={contactImage[Source]}
+                        alt={Source}
+                        loading="lazy"
+                        placeholder="blur"
+                      />
                     </Box>
                     <Box sx={{ marginLeft: "10px" }}>
                       <Stack direction="column" spacing={1}>
@@ -71,6 +76,8 @@ export default function ContactUS() {
               src={ElbertFooterLogo}
               alt="logo"
               style={{ objectFit: "contain" }}
+              loading="lazy"
+              placeholder="blur"
             />
           </Grid>
           <Grid size={{ md: 4, sm: 4, xs: 12, xl: 4 }}>

@@ -128,6 +128,8 @@ export default function HeroSection() {
                     style={{
                       objectFit: "fill",
                     }}
+                    loading="lazy"
+                    placeholder="blur"
                   />
                 </Box>
               </Grid>
@@ -144,6 +146,8 @@ export default function HeroSection() {
                             style={{
                               objectFit: "fill",
                             }}
+                            loading="lazy"
+                            placeholder="blur"
                           />
                         </Box>
                         <Stack direction="column">
@@ -178,6 +182,8 @@ export default function HeroSection() {
           <Image
             src={TwoDot}
             alt="TwoDot"
+            loading="lazy"
+            placeholder="blur"
             style={{
               objectFit: "fill",
             }}

@@ -19,6 +19,7 @@ export default function Logo() {
               src={ElbertLogo}
               alt="logo"
               style={{ objectFit: "contain" }}
+              loading="lazy"
             />
           </Box>
         </Grid>

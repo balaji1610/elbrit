@@ -123,6 +123,8 @@ export default function Ingredients() {
               style={{
                 objectFit: "fill",
               }}
+              loading="lazy"
+              placeholder="blur"
             />
           </Grid>
         </Grid>

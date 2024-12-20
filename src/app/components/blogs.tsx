@@ -57,6 +57,8 @@ export function ImageWithText({ imageList, index }: ImageWithTextPropsTYpe) {
           height={isDeskopScreen ? (IsfullImage ? 360 : 160) : 180}
           width={280}
           style={{ objectFit: "cover", borderRadius: "10px" }}
+          loading="lazy"
+          placeholder="blur"
         />
       </Box>
 
