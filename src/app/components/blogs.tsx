@@ -100,16 +100,16 @@ export default function Blogs() {
   const isDeskopScreen = useMediaQuery("(min-width:600px)");
   return (
     <>
-      <Box
-        sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
-      >
+      <Box>
         <Stack direction="column">
           <Box sx={{ color: "#103f4e" }}>
             <Typography align="center">{TITLE}</Typography>
           </Box>
           <Box sx={{ color: "#103f4e" }}>
             {" "}
-            <Typography variant="h4">{SUBTITLE}</Typography>
+            <Typography variant="h4" align="center">
+              {SUBTITLE}
+            </Typography>
           </Box>
         </Stack>
       </Box>

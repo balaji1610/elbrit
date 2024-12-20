@@ -1,3 +1,4 @@
+"use client";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 import Content from "../utils/content.json";
@@ -31,9 +32,13 @@ export default function Ingredients() {
 
   return (
     <Box
-      sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "flex-end",
+      }}
     >
-      <Box sx={{ width: "80%" }}>
+      <Box sx={{ width: "90%" }}>
         <Grid container spacing={2}>
           <Grid size="auto">
             <Stack direction="column">
@@ -68,6 +73,7 @@ export default function Ingredients() {
                   md: 3,
                   sm: 3,
                   xs: 12,
+                  xl: 3,
                 }}
               >
                 <Box
@@ -79,18 +85,29 @@ export default function Ingredients() {
                     width: "auto",
                   }}
                 >
-                  <Stack direction="column" sx={{ marginLeft: "20px" }}>
+                  <Stack
+                    direction="column"
+                    sx={{ marginLeft: "20px", padding: "10px" }}
+                  >
                     <Box sx={{ color: "#103f4e", fontWeight: "bold" }}>
-                      <Typography variant="subtitle2" gutterBottom>
+                      <Typography variant="h6" gutterBottom>
                         {Title}
                       </Typography>
                     </Box>
-                    <Box sx={{ color: "#7a97a0" }}>
+                    <Box sx={{ color: "#3c5a63" }}>
                       <Typography variant="body1" gutterBottom>
                         {Description}
                       </Typography>
                     </Box>
-                    <Box sx={{ color: "#2a5361", textDecoration: "underline" }}>
+                    <Box
+                      sx={{
+                        color: "#1b3b46",
+                        textDecoration: "underline",
+                        cursor: "pointer",
+                        marginTop: "40px",
+                        textUnderlineOffset: "5px",
+                      }}
+                    >
                       <Typography variant="caption">{button}</Typography>
                     </Box>
                   </Stack>
@@ -99,7 +116,7 @@ export default function Ingredients() {
             );
           })}
 
-          <Grid size={{ md: 3, sm: 3, xs: 12 }}>
+          <Grid size={{ md: 3, sm: 3, xs: 12, xl: 3 }}>
             <Image
               src={vitaminsBlank}
               alt="vitaminsBlank"
