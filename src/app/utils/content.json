@@ -88,5 +88,55 @@
         "button": "SEE MORE"
       }
     ]
-  }
+  },
+  "Blogs": [
+    {
+      "Category": "Bottle Pills",
+      "Description": "The Covid-19 Epidemic In 2022 Is Back",
+      "IsfullImage": true,
+      "Date": "20 APR"
+    },
+    {
+      "Category": "Bottle Pills",
+      "Description": "The Covid-19 Epidemic In 2022 Is Back",
+      "IsfullImage": false,
+      "Date": "20 APR"
+    },
+    {
+      "Category": "Bottle Pills",
+      "Description": "The Covid-19 Epidemic In 2022 Is Back",
+      "IsfullImage": true,
+      "Date": "20 APR"
+    },
+    {
+      "Category": "Bottle Pills",
+      "Description": "The Covid-19 Epidemic In 2022 Is Back",
+      "IsfullImage": false,
+      "Date": "20 APR"
+    },
+    {
+      "Category": "Pills",
+      "Description": "The Covid-19 Epidemic In 2023 Is Back",
+      "IsfullImage": false,
+      "Date": "20 APR"
+    },
+    {
+      "Category": "Pills",
+      "Description": "The Covid-19 Epidemic In 2023 Is Back",
+      "IsfullImage": true,
+      "Date": "20 APR"
+    },
+    {
+      "Category": "Pills",
+      "Description": "The Covid-19 Epidemic In 2023 Is Back",
+      "IsfullImage": false,
+      "Date": "20 APR"
+    },
+    {
+      "Category": "Pills",
+      "Description": "Hac hendrerit mus nons semper suspendisse",
+      "IsfullImage": true,
+      "Date": "17 MAR"
+    }
+  ]
 }

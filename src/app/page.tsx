@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import HeroSection from "./components/heroSection";
 import ListFeature from "./components/listFeature";
 import Ingredients from "./components/ingredients";
+import Blogs from "./components/blogs";
 import React, { useState, useEffect } from "react";
 export default function Home() {
   const [mounted, setMounted] = useState<boolean>(false);
@@ -20,6 +21,7 @@ export default function Home() {
       <HeroSection />
       <ListFeature />
       <Ingredients />
+      <Blogs />
     </>
   );
 }

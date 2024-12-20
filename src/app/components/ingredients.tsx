@@ -61,7 +61,6 @@ export default function Ingredients() {
           </Grid>
           {IngredientsList.map((item, index) => {
             const { Title, Description, button } = item;
-
             return (
               <Grid
                 key={index}
