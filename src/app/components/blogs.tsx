@@ -6,6 +6,7 @@ import BlogImage1 from "../../../public/blog1Image.png";
 import BlogImage2 from "../../../public/blog2image.png";
 import Content from "../utils/content.json";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import Stack from "@mui/material/Stack";
 
 export function ImageWithText({ imageList, index }: any) {
   const { Category, Description, IsfullImage, Date } = imageList;
@@ -81,27 +82,44 @@ export function ImageWithText({ imageList, index }: any) {
 }
 
 export default function Blogs() {
-  const { Blogs } = Content;
+  const {
+    Blogs: { Blogs, TITLE, SUBTITLE },
+  } = Content;
   const isDeskopScreen = useMediaQuery("(min-width:600px)");
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-      }}
-    >
-      <Box sx={{ width: isDeskopScreen ? "90%" : "70%" }}>
-        <Grid container spacing={2}>
-          {Blogs.map((item, index) => {
-            return (
-              <Grid key={index} size={{ md: 3, sm: 3, xs: 12, xl: 3 }}>
-                <ImageWithText imageList={item} index={index} />
-              </Grid>
-            );
-          })}
-        </Grid>
+    <>
+      <Box
+        sx={{ display: "flex", flexDirection: "row", justifyContent: "center" }}
+      >
+        <Stack direction="column">
+          <Box sx={{ color: "#103f4e" }}>
+            <Typography align="center">{TITLE}</Typography>
+          </Box>
+          <Box sx={{ color: "#103f4e" }}>
+            {" "}
+            <Typography variant="h4">{SUBTITLE}</Typography>
+          </Box>
+        </Stack>
       </Box>
-    </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+        }}
+      >
+        <Box sx={{ width: isDeskopScreen ? "90%" : "70%" }}>
+          <Grid container spacing={2}>
+            {Blogs.map((item, index) => {
+              return (
+                <Grid key={index} size={{ md: 3, sm: 3, xs: 12, xl: 3 }}>
+                  <ImageWithText imageList={item} index={index} />
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Box>
+      </Box>
+    </>
   );
 }
